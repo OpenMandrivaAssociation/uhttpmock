@@ -9,7 +9,7 @@
 Summary:	HTTP web service mocking library
 Name:		uhttpmock
 Version:	0.2.0
-Release:	2
+Release:	3
 Epoch:		1
 Group:		System/Libraries
 License:	LGPL-2.1+
