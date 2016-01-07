@@ -8,13 +8,13 @@
 
 Summary:	HTTP web service mocking library
 Name:		uhttpmock
-Version:	0.2.0
-Release:	3
+Version:	0.5.0
+Release:	1
 Epoch:		1
 Group:		System/Libraries
 License:	LGPL-2.1+
-URL:		http://gitorious.org/uhttpmock
-Source0:	https://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
+URL:		https://gitlab.com/uhttpmock/uhttpmock
+Source0:	https://tecnocode.co.uk/downloads/uhttpmock/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(gdk-pixbuf-2.0)
 BuildRequires:	pkgconfig(glib-2.0) >= 2.16.0
 BuildRequires:	pkgconfig(gobject-2.0) >= 2.16.0
