@@ -77,7 +77,7 @@ rm -f %{buildroot}%{_libdir}/*.la
 %{_libdir}/lib%{name}*-%{api_version}.so.%{lib_major}*
 
 %files -n %develname
-%doc %{_datadir}/gtk-doc/html/lib%{name}
+%doc %{_datadir}/gtk-doc/html/lib%{name}-%{api_version}
 %{_datadir}/gir-1.0/Uhm-%{api_version}.gir
 %{_libdir}/*.so
 %{_includedir}/*
