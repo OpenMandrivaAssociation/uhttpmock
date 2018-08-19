@@ -1,4 +1,5 @@
 removed_sources:
   uhttpmock-0.2.0.tar.xz: 96b04312fd46e80e959b735bbb1ca8ded44f22a3
-sources:
   uhttpmock-0.5.0.tar.xz: 83986afd743b6119a192090cc7d29987842682df
+sources:
+  uhttpmock-0.5.1.tar.xz: 05a602106c43244c6cb1d7708cf18efb45a02701
