@@ -42,7 +42,7 @@ playback of HTTP request/response traces.
 %package -n %develname
 Summary: Support files necessary to compile applications with %{name}
 Group: Development/C
-Requires: %{lib_name} = %epoch:%{version}
+Requires: %{lib_name} = %epoch:%{version}-%{release}
 Provides: %{name}-%{api_version}-devel = %epoch:%{version}-%{release}
 Provides: %{name}-devel = %epoch:%{version}-%{release}
 
