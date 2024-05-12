@@ -1,5 +1,5 @@
-%define api_version 0.0
-%define lib_major   0
+%define api_version 1.0
+%define lib_major   1
 %define lib_name    %mklibname uhttpmock %{api_version} %{lib_major}
 %define gi_name     %mklibname uhttpmock-gir %{api_version}
 %define develname   %mklibname -d uhttpmock
@@ -8,19 +8,20 @@
 
 Summary:	HTTP web service mocking library
 Name:		uhttpmock
-Version:	0.5.3
-Release:	2
+Version:	0.10.0
+Release:	1
 Epoch:		1
 Group:		System/Libraries
 License:	LGPL-2.1+
 URL:		https://gitlab.com/uhttpmock/uhttpmock
 Source0:	https://tecnocode.co.uk/downloads/uhttpmock/%{name}-%{version}.tar.xz
+BuildRequires:  meson
 BuildRequires:	pkgconfig(gdk-pixbuf-2.0)
 BuildRequires:	pkgconfig(glib-2.0) >= 2.16.0
 BuildRequires:	pkgconfig(gobject-2.0) >= 2.16.0
 BuildRequires:	pkgconfig(libxml-2.0) >= 2.4.16
 BuildRequires:	pkgconfig(gobject-introspection-1.0) >= 0.6.4
-BuildRequires:	pkgconfig(libsoup-2.4)
+BuildRequires:	pkgconfig(libsoup-3.0)
 BuildRequires:	pkgconfig(vapigen)
 BuildRequires:	gtk-doc
 BuildRequires:	intltool
@@ -59,14 +60,13 @@ Requires:	%{lib_name} = %epoch:%{version}-%{release}
 GObject Introspection interface library for %{name}.
 
 %prep
-%setup -q
-
+%autosetup -p1
 %build
-%configure --enable-gtk-doc --disable-static --enable-introspection --enable-vala
-%make
+%meson
+%meson_build
 
 %install
-%makeinstall_std
+%meson_install
 
 # remove unpackaged files
 rm -rf %{buildroot}%{_datadir}/../doc/lib%{name}
