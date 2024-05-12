@@ -66,7 +66,7 @@ GObject Introspection interface library for %{name}.
 %meson_build
 
 %install
-%maeson_install
+%meson_install
 
 # remove unpackaged files
 rm -rf %{buildroot}%{_datadir}/../doc/lib%{name}
