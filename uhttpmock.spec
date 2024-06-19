@@ -8,7 +8,7 @@
 
 Summary:	HTTP web service mocking library
 Name:		uhttpmock
-Version:	0.10.0
+Version:	0.11.0
 Release:	1
 Epoch:		1
 Group:		System/Libraries
